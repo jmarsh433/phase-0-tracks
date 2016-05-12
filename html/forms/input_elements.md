@@ -8,7 +8,7 @@ Input type
 	Classifies the type of text input into the field
 		ex: text, email, password, date, checkbox
 			note: Checkbox has a "value" associated with it
-					- Agree/Disagree
+					- Agree/Disagree.
 Name
 	provides text in the box if the field cannot be displayed
 Placeholder
