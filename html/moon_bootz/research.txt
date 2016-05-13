@@ -1,0 +1,7 @@
+Block-level element - this seperates or defines a section in an html block of code.  Examples of this are division <div> and span <span>.  
+
+I actually found a great video on Youtube discussing the differences between <div> and <span> (https://www.youtube.com/watch?time_continue=24&v=XQTfdsKFY-w).
+From what I have gathered the <span> command is used within the text (inline feature). It can be used to format specific words or sentences when paired with input from CSS.
+<div> command is different from <span> in that it will add in a line break in the text. Creating a new section or paragraph.
+
+Inline elements (such as <span>) are treated as part of the flow of the document. Inline elements have no breaks associated with the element. Inline elements are nested within block elements. Block elements can also be nested inside block elements but you cannot nest block elements inside inline elements.
