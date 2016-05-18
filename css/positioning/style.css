@@ -1,0 +1,24 @@
+.wrapper {
+  position: center;
+}
+
+#octopus {
+  position: absolute;
+  padding-left: 50%;
+  padding-top: 10%;
+  z-index: 1;
+}
+
+#glasses {
+  position: absolute;
+  padding-left: 53%;
+  padding-top: 17%;
+  z-index: 2;
+}
+
+#hat {
+  position: absolute;
+  padding-left: 49%;
+  padding-top: 5%;
+  z-index: 3
+}
