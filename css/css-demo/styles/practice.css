@@ -1,0 +1,16 @@
+section#contact-info {
+  font-size: 3em;
+
+}
+
+section.job {
+	background-color: #e9e5dc;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	margin-top: 8px;
+	border-radius: 10px;
+}
+
+.accomplishments {
+	font-size: .8em;
+}
