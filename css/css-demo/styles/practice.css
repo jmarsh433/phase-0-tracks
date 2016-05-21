@@ -14,3 +14,12 @@ section.job {
 .accomplishments {
 	font-size: .8em;
 }
+
+a:hover {
+	color: #FF00FF;
+}
+
+ul > li {
+	margin: 20px;
+}
+
