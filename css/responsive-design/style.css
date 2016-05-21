@@ -32,6 +32,44 @@ figcaption {
 }
 
 body {
-  width: 960px;
+  max-width: 960px;
 }
+
+section#external-links {
+  width: 20%;
+  position: absolute; 
+}
+
+#main-content {
+  width: 756px;
+  padding-left: 20%;
+  margin-left: 5%;
+}
+
+#links {
+/*  display: inline-block;
+  vertical-align: left;*/
+
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  h1, p {
+    background-color: orange;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  img {
+    vertical-align: middle;
+    width: 10%;
+  }
+}
+
 
