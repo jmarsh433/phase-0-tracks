@@ -1,0 +1,28 @@
+#octofashion {
+	position: relative;
+	top: -70px;
+}
+
+.octopus {
+	display: block;
+	margin-left: 40%;
+	margin-top: 20%;
+	z-index: -1;
+}
+
+
+.glasses{
+	position: absolute;
+	display: block;
+	left: 43%;
+	top: 100px;
+	z-index: 1;
+}
+
+.hat{
+	position: absolute;
+	display: block;
+	left: 39%;
+	top: -90px;
+	z-index: 2;
+}
