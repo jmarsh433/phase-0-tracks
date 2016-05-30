@@ -72,7 +72,6 @@ n.times do
 			puts "Thank you!"
 			break
 		else
-			puts ""
 		end
 	end
 end
