@@ -35,7 +35,20 @@ while garlic = gets.chomp
 end
 
 
+prompt = "> "
+puts "Would you like to enroll in the company’s health insurance? y/n?"
+print prompt
 
-# puts "Would you like to enroll in the company’s health insurance?"
-# insurance = gets.chomp
-
+while insurance = gets.chomp
+	case insurance
+	when "y"
+		puts "Probably not a vampire"
+		break
+	when "n"
+		puts "Probably a vampire"
+		break
+	else
+		puts "Please answer y or n"
+		print prompt
+	end
+end
