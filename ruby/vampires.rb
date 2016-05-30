@@ -1,5 +1,6 @@
 puts "How many employees would you like processed?"
 	n = gets.to_i
+
 n.times do
 
 	puts "What is your name?"
@@ -56,4 +57,20 @@ n.times do
 		end
 	end
 	
+	prompt = "> "
+	puts "List your allergies one at a time. Type done when finished."
+	print prompt
+		
+	while allergies = gets.chomp
+		case allergies
+		when "sunshine"
+			puts "Probably not a vampire."
+			break
+		when "done"
+			puts "Thank you!"
+			break
+		else
+			puts ""
+		end
+	end
 end
