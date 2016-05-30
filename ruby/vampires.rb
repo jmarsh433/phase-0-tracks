@@ -1,3 +1,5 @@
+#Vampire Identifyer
+
 puts "How many employees would you like processed?"
 	n = gets.to_i
 
@@ -74,3 +76,5 @@ n.times do
 		end
 	end
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
