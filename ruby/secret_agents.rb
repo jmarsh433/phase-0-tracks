@@ -18,5 +18,20 @@ encrypt("azb")
 encrypt("zab")
 encrypt("zzz")
 
+# Decryption Method
+def decrypt(string)
+    i = 0
+  correct_string = ""
+  
+  while i < string.length
+    alph = "abcdefghijklmnopqrstuvwxyz"
+    letter_position = alph.index(string[i])
+    string_value = alph[letter_position - 1]
+    correct_string += string_value  
+    i += 1
+  end
+  puts correct_string
+end
 
+decrypt("fes")
 	
