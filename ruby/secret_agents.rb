@@ -30,7 +30,7 @@ def decrypt(string)
     correct_string += string_value  
     i += 1
   end
-  puts correct_string
+  return correct_string
 end
 
 decrypt("fes")
