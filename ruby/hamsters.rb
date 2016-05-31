@@ -41,4 +41,4 @@ end
 hamster_data = [name, volume, fur_color, good_candidate, est_age]
 puts "#{hamster_data}"
 
-puts "The hamster's name is #{name}, owner's volume level: #{volume}, color of fur is #{fur_color}, is it a good candidate #{good_candidate}, it's age is #{est_age}"
+puts "The hampster's name is #{name}, owner's volume level: #{volume}, color of fur is #{fur_color}, is it a good candidate #{good_candidate}, it's age is #{est_age}"
