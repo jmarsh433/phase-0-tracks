@@ -1,0 +1,80 @@
+#Elevator Algorithm
+Robot take note of current_floor_level
+Puts "Do you want to go up or down"
+	answer = gets.chomp
+If "up"
+	press up_arrow
+Else
+	press down_arrow
+
+When doors open, enter the elevator.
+If answer = "up"
+	choose desire_floor > current_floor_level
+Else 
+	choose desired_floor < current_floor_level
+Press door_close button
+
+Elevator will proceed to desired_floor
+When doors open proceed out of elevator at destination
+
+
+
+#Guitar Tuner Algorithm
+tune_by_ear
+
+Tuning E String
+Play Low_E_string (6th string or thickest)
+	Play a reference_E_note
+		If Low_E_string is sharp (higher than reference note)
+			Twist tuner to loosen Low_E_string until Low_E_string and reference note are in harmony
+		If E_string is flat (lower than reference note)
+			Twist tuner to tighten E sring until Low_E_string and reference note are in harmony
+	Low_E_string is now in tune
+Now that there is one string in Tune we can tune all others to that reference Low_E_string
+
+Tuning A String
+Place finger on the 5th_fret of the Low_E_string -- This is the A note
+the next string down (A_string) is the same note when played open.
+Strike the 5th_fret Low_E_String and stike the open A_string
+	if the open A is sharp (higher than the Low E)
+		Twist tuner to loosen A_String until it is at Low_E pitch (harmony)
+	Else
+		the open A is flat (lower than the low E)
+		Twist tuner to tighten A_string until it is a Low_E pitch (harmony)
+
+Tuning D String
+Place finger on 5th fret of A string (the is the D note)
+Play Open D string then play 5th fret A string
+	if open D string is flat, 
+		twist tuner to tighten string until in harmony with 5th fret A
+	else
+		open D string is sharp, twist tuner to loosen string until in harmony with 5th fret A
+
+
+Tuning G String
+Place finger on 5th fret of D string (this is the D note)
+play Open G string then play 5th fret D string
+	if open G string is flat
+		twist tuner to tighten string until 5th fret D and open G are in harmony
+	else 
+		open G is sharp - twist string to loosen until 5th fret D and open G are in harmony
+
+
+Tuning B STring
+Place finger on 4th fret of G string (this is a B note)
+play open B then play 4th fret G string
+	if open B is flat
+		twist tuner to tighten string until 4th fret G and open B are in harmony
+	else
+		open B is sharp - twist B string to loosen until 4th fret G and Open b are in harmony
+
+Tuing High e String
+Place finger on 5th fret of B string (this is an E note)
+Play open High e then play 5th fret B string
+	if open High e is flat
+		twist tuner to tighten string until 5th fret B string and open high e string are in harmony
+	else
+		open high e string is sharp -- twist high e string to loosen until 5th fret B and open high e are in harmony
+
+end
+
