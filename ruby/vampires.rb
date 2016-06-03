@@ -7,9 +7,14 @@ n.times do
 
 	puts "What is your name?"
 		name = gets.chomp
-	
-	puts "Hello #{name} it is very nice to meet you...Vampire cough cough"
-	
+		if name == "Drake Cula"
+			puts "Probably a vampire"
+		elsif name == "Tu Fang"
+			puts "Probably a vampire"
+		else
+			puts "Hello #{name} it is very nice to meet you"
+		end
+
 	puts "How old are you?"
 		age = gets.to_i
 	puts "What year were you born?"
