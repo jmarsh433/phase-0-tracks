@@ -61,13 +61,17 @@ puts "Birth Year: #{birth_year}"
 puts "Garlic: #{vampires_hate_garlic}"
 puts "Insurance: #{vampires_no_insurance}"
 
-if correct_year == 2016 && (vampires_hate_garlic == "y" || vampires_no_insurance == "y")
+case
+when correct_year == 2016 && (vampires_hate_garlic == "y" || vampires_no_insurance == "y")
 	puts "Probably not a vampire"
-elsif (correct_year != age + birth_year) && (vampires_hate_garlic == "n" || vampires_no_insurance == "n")
-	puts "Probably a vampire"
-elsif (correct_year != age + birth_year && vampires_hate_garlic == "n" && vampires_no_insurance == "n")
+when (correct_year != 2016) && (vampires_hate_garlic == "n")  && (vampires_no_insurance == "n")
 	puts "Almost certainly a vampire"
+when correct_year != 2016 && (vampires_hate_garlic == "n" || vampires_no_insurance == "n")
+	puts "Probably a vampire"
+else 
+	puts "Results inconclusive"
 end
+
 
 
 if vampire_name == "Tu Fang"
