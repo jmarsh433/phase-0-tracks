@@ -2,8 +2,22 @@
 #Housing Renovation Worker Location
 
 marchand_renovation = {
-	'basement' => ['framing', 'carpeting', 'plumbing'] 
-	'bathroom' => ['tiling', 'sink', 'bathtub']
-	'bedroom' => ['master_bed', 'curtains', 'wallpaper']
-	'kitchen' => ['table', 'chairs', 'wood_flooring']
+	basement: {
+		'unfinished_work': ['framing', 'carpeting', 'plumbing'],
+		'completeed_word': ['wiring', 'foundation']
 	}
+	bathroom: { 
+		'unfinished_work': ['tiling', 'sink', 'bathtub'],
+		'finished_work': ['wiring', 'painting']
+	}
+	bedroom: {
+		'unfinished_work': ['master_bed', 'curtains', 'wallpaper'],
+		'finished_work': ['carpeting', 'wiring', 'lighting']
+	}
+	kitchen: {
+		'unfinished_work': ['painting', 'wiring'],
+		'finished_work': ['stove', 'counter']
+	}
+}
+
+marchand_renovation[:basement]
