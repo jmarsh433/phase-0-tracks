@@ -1,3 +1,10 @@
+#Pseudo Code
+#Goal: to create readable format in ruby code to present a questionaire for client information.
+#All informaiton is stored in a hash which can be called upon later to present client info for designer.
+#Give option to change input for client info.  Add updated input to the hash and print for client info
+#hash = {client info: "", ...........}
+#phrase questions in put statments and set the variable that is recorded equal to the symbol in the hash.
+
 #Interior Designer Hash Program
 $interior_design = {name:"", age:"", num_children:"", decore_theme:"", budget:"", num_rooms:"", hardwood_floors:""}
 
