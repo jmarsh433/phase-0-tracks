@@ -12,16 +12,18 @@ last_name = gets.chomp
 
 name_array = ["#{last_name}".downcase, "#{first_name}".downcase]
  
-def new_alias(word)
+def new_alias(name)
 	i = 0
 	correct_string = ""
-	while i < word.length
+	while i < name.length
 	vowel = "aeioua"
+	#I couldn't a "u" vowel to change to an "a" so I simply added an "a" to the end of the vowel string
 	consonant = "bcdfghjklmnpqrstvwxyzb"
-		if consonant_position = consonant.index(word[i])
+	#Similary to my vowel problem, i used the same technique to get a "b" to print for all "z" string inputs.
+		if consonant_position = consonant.index(name[i])
 			string_value = consonant[consonant_position +1]
 			correct_string += string_value
-		elsif vowel_position = vowel.index(word[i])
+		elsif vowel_position = vowel.index(name[i])
 			string_value = vowel[vowel_position +1]
 			correct_string += string_value
 		end
