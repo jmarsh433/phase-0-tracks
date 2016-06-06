@@ -11,7 +11,6 @@
 # => “zoom”
 
 # "enhance".center(20)
-# "enhance".rjust(20).just(20)
 # => "    enhance    "
 
 # "Stop! You’re under arrest!".upcase
