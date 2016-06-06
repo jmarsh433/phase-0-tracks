@@ -4,16 +4,16 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
-# "iNvEsTiGaTiOn".<???>
+# "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
-# "zom".<???>
+# "zom".insert(1, "o")
 # => “zoom”
 
-# "enhance".<???>
+# "enhance".center(20)
 # => "    enhance    "
 
-# "Stop! You’re under arrest!".<???>
+# "Stop! You’re under arrest!".swapcase/.upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
 # "the usual".<???>
