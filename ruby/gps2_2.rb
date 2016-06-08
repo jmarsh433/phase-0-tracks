@@ -73,6 +73,17 @@ delete_item("sugar")
 		#record new value and update value of grocery item 
 # output: print updated grocery list with edited item and quantity
 
+def item_quantity(key, quantity)
+	$grocery_hash.key?(key)
+	if true
+		$grocery_hash[key] = quantity
+	else
+		$grocery_hash
+	end
+	$grocery_hash
+end
+
+item_quantity("sugar", 2)
 
 
 # Method to print a list and make it look pretty
