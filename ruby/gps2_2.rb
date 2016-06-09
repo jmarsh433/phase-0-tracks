@@ -22,8 +22,6 @@ def grocery_list(item)
 	$grocery_hash = grocery_array.product([1]).to_h
 end
 
-grocery_list("eggs yogurt soda candy")
-
 
 # # Method to add an item to a list
 # # input: open a hash for the grocery list: food item = key/ value = quantity (numerical count)
@@ -33,15 +31,14 @@ grocery_list("eggs yogurt soda candy")
 # 			#record quantity as values (numerical)
 # # output: print grocery list as hash\
 
-def new_item(item)
+
+def new_item(item, value)
 	new_array = item.split
 
-	$new_hash = new_array.product([1]).to_h
+	$new_hash = new_array.product([value]).to_h
 
 	$grocery_hash = $new_hash.merge($grocery_hash)
 end	
-	
-new_item("cream milk sugar pizza")
 
 
 # Method to remove an item from the list
@@ -52,7 +49,7 @@ new_item("cream milk sugar pizza")
 				#if list is fine type finished
 # output: puts updated grocery list (hash of items (keys) quantity (values)
 
-
+	
 def delete_item(item)
 	$grocery_hash.key?(item)
 	if true
@@ -62,9 +59,6 @@ def delete_item(item)
 	end
 	$grocery_hash
 end
-
-delete_item("sugar")
-
 
 # Method to update the quantity of an item
 # input: Make note whether or not user wants to update quantity of an item (value)
@@ -78,12 +72,10 @@ def item_quantity(key, quantity)
 	if true
 		$grocery_hash[key] = quantity
 	else
-		$grocery_hash
+		$grocery_hash[key]
 	end
 	$grocery_hash
 end
-
-item_quantity("sugar", 2)
 
 
 # Method to print a list and make it look pretty
@@ -92,3 +84,107 @@ item_quantity("sugar", 2)
 		# Add title to the list through a print command "Grocery List"
 		# List each of the keys and values as pairs with numerical order
 # output: print the update grocery list 
+
+#USER INTERFACE
+
+puts "List your groceries..."
+	groceries = gets.chomp
+puts "Current Grocery List"
+puts grocery_list(groceries)
+
+
+	valid_input = false
+	until valid_input
+
+	puts "Any additional items? y/n?"
+		add_items = gets.chomp
+		if add_items == "y"
+			puts "Enter item..."
+				item = gets.chomp
+			puts "Enter quantity..."
+				qty = gets.to_i
+			puts new_item(item, qty)
+				valid_input = true
+		elsif add_items == "n"
+			puts grocery_list(groceries)
+				valid_input = true
+		else
+			puts "Invalid response"
+		end
+	end
+	
+	valid_input = false
+	until valid_input
+		puts "Anything else? y/n?"
+		more_items = gets.chomp
+		
+		if more_items == "y"
+			puts "Item please?"
+				item = gets.chomp
+			puts "Quantity please?"
+				qty = gets.to_i
+			puts new_item(item, qty)
+		elsif more_items == "n"
+			puts new_item(item, qty)
+				valid_input = true
+		else
+				puts "invalid input"
+			end
+		end
+	
+	
+	valid_input	= false
+	until valid_input
+	
+		puts "Here is your current grocery list...is there anything you would like to remove? y/n?"
+				puts new_item(item, qty)
+				item_removal = gets.chomp
+	
+		if item_removal == "n"
+			puts new_item(item, qty)
+			valid_input = true
+		elsif item_removal == "y"
+			puts "Enter item for removal..."
+				remove = gets.chomp
+			puts "Here is your current grocery list."
+			puts delete_item(remove)
+		else
+			puts "item is not on the list"
+		end	
+	end
+
+
+	valid_input = false
+	until valid_input
+	
+		puts "Here is your current grocery list. Is there any item you want to change the quantity of? y/n?"
+			qty_change = gets.chomp
+			
+			if qty_change == "y"
+				puts "Enter name of item..."
+					item_name = gets.chomp
+				puts "Enter quantity of #{item_name}"
+					qty = gets.to_i
+				puts item_quantity(item_name, qty)
+			elsif qty_change == "n"
+				puts "Here is your final grocery list! Good Luck Shopping?"
+				puts delete_item(remove)
+				valid_input = true
+			else
+				puts "Invalid response"
+			end
+		end
+		
+		
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
