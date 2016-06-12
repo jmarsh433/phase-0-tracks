@@ -1,9 +1,12 @@
 class Puppy
 
-  def fetch(toy)
+  def initialize(toy)
+
+    @toy = toy
     puts "I brought back the #{toy}!"
-    toy
+    
   end
 
 end
 
+Puppy.new("ball")
