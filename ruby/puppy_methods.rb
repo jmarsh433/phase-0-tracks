@@ -9,7 +9,7 @@ class Puppy
     puts "I brought back the #{toy}!"
   end
 
-  def woof(n)
+  def speak(n)
   n.times do
   		puts "Woof!"
   	end
@@ -17,6 +17,10 @@ class Puppy
 
   def roll_over
   	puts "rolls over"
+  end
+
+  def play_dead
+  	puts "plays dead"
   end
 
   def dog_years(human_years)
@@ -27,6 +31,10 @@ end
 
 puppy = Puppy.new
 puppy.fetch("ball")
-puppy.woof(7)
+puppy.speak(7)
 puppy.roll_over
+puppy.play_dead
 puppy.dog_years(7)
+
+#Release 2
+
