@@ -1,30 +1,37 @@
 class Santa
-	def initialize(gender, ethnicity)
-		puts "Initialzing Santa instance..."
+	def initialize(gender, ethnicity, location)
+		# puts "Initialzing Santa instance..."
 		@gender = gender
 		@ethnicity = ethnicity
-		puts "#{gender}, #{ethnicity}"
-		#Attributes commonly done in initialize but can be done in any instance
+		@location = location
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@age = 0
+		puts "#{gender}, #{ethnicity}, #{location}"
 	end
 
-	def speak
-		puts "Ho, ho, ho! Haaaappy holidays!"
+	def celebrate_birthday(n)
+		@age + n 
 	end
 
-	def eat_milk_and_cookies(cookie)
-		puts "That was a good #{cookie}"
+	def get_mad_at(reindeer_name)
+
+	def get_mad_at(reindeer_name)
+		@reindeer_ranking.index(reindeer_name)
+		@reindeer_ranking.delete(reindeer_name)
+		@reindeer_ranking.insert(8, reindeer_name)
 	end
 end
 
-santa = Santa.new("male", "white")
-santa.speak
-santa.eat_milk_and_cookies("Snickerdoodle")
-# santas = []
-# santas << Santa.new("agender", "black")
-# santas << Santa.new("female", "Latino")
-# santas << Santa.new("bigender", "white")
-# santas << Santa.new("male", "Japanese")
-# santas << Santa.new("female", "prefer not to say")
-# santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
-# santas << Santa.new("N/A", "N/A")
+
+#Driver Code
+# santas = Santa.new("male", "black", "NYC")
+
+santas = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_location = ["NYC", "Boston", "Philadelphia", "Washington D.C.", "Atlanta", "Chicago", "Los Angeles"]
+example_genders.length.times do |i|
+  santas << Santa.new(example_genders[i], example_ethnicities[i], example_location[i])
+end
+
 
