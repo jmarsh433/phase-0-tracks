@@ -14,17 +14,18 @@ class Santa
 	end
 
 	def get_mad_at(reindeer_name)
-
-	def get_mad_at(reindeer_name)
 		@reindeer_ranking.index(reindeer_name)
 		@reindeer_ranking.delete(reindeer_name)
 		@reindeer_ranking.insert(8, reindeer_name)
+		p @reindeer_ranking
 	end
 end
 
 
 #Driver Code
 # santas = Santa.new("male", "black", "NYC")
+santas = Santa.new("male", "black", "NYC")
+santas.get_mad_at("Rudolph")
 
 santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
@@ -33,5 +34,4 @@ example_location = ["NYC", "Boston", "Philadelphia", "Washington D.C.", "Atlanta
 example_genders.length.times do |i|
   santas << Santa.new(example_genders[i], example_ethnicities[i], example_location[i])
 end
-
 
