@@ -3,7 +3,7 @@
 class Snowboarder
 
 	attr_reader :rider, :snow_conditions, :mountain
-	attr_accessor :rider
+	attr_accessor :rider, :mountain
 
 	def initialize(rider)
 		@rider = rider
@@ -37,6 +37,7 @@ end
 
 
 snow = Snowboarder.new("Torstein Horgmo")
+snow.mountain = "Breckenridge"
 puts "The snow is #{snow.snow_conditions} here at #{snow.mountain}!!!"
 snow.nationality("Norway")
 snow.launch(20)
@@ -54,34 +55,47 @@ puts "What a insane run from #{snow.rider}!!!"
 
 #User Interface
 
-count = 0
 
-def tournament_results
-	puts "Type the name of a rider to get the latest info!"
-		rider_name = gets.chomp
+ex_riders = ["Torstein Horgmo", "Sean White", "Halldor Helgason", "Eiki Helgason", "Marc McMorris", "Travis Rice"]
+ex_trick = ["Triple Rodeo", "Double Backflip", "1080", "1260", "1440", "Switchbutter 540"] 
+ex_nationality = ["Norway", "USA", "Iceland", "Iceland", "Canada", "USA"]
+ex_mountain = ["Park City", "Jackson Hole", "Breckenridge", "Whistler", "Teluride", "Stowe"]
 
-		run_generator(rider_name)
+puts "Below are the riders competition profiles as well as their final scores"
+
+rider_profile = {}
+(ex_riders.length).times { |i| rider_profile[i + 1] = [] }
+
+rider_profile.each_with_index do |(rider), i|
+  rider_profile[rider] = [ex_riders[i], ex_nationality[i], ex_trick[i], rand(70..100)]
 end
 
-def run_generator
-	@ex_riders = ["Torstein Horgmo", "Sean White", "Halldor Helgason", "Eiki Helgason", "Marc McMorris", "Travis Rice"]
-	@ex_trick = ["Triple Rodeo", "Double Backflip", "1080", "1260", "1440", "Switchbutter 540"] 
+p rider_profile
 
-	rider_profile_array = []
+# puts "I there a particular rider you are interested in? Type his name below"
+# 	rider_name = gets.chomp
 
-	def rand_rider
-		rand_rider = @ex_riders.shuffle.first
-	end
+#Snowboard competiton Simulator
 
-	def rand_trick 
-		rand_trick = @ex_trick.shuffle.first 
-	end
+puts "Choose a rider from the list below"
+	p ex_riders
+	rider_choice = gets.chomp
+puts "Choose a mountain from the list"
+	p ex_mountain
+	mountain_choice = gets.chomp
+puts "Choose a trick from the list"
+	p ex_trick
+	trick_choice = gets.chomp
 
-	def rand_score
-		rand_score = rand(100)
-	end
 
-	count = 0 
+#Choose a mountain
+#Choose a trick
 
-	until rider_profile_array.length = 
+
+
+
+
+
+
+
 
