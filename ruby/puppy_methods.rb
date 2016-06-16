@@ -1,4 +1,4 @@
-class Puppy
+# class Puppy
 
   def initialize(toy, barks, human_years)
     puts "Initializing new puppy instance ..."
@@ -45,35 +45,32 @@ class Golf
   def initialize(club)
     puts "Initializing golf..."
     @club = club
-    @example_clubs = ["driver", "5-iron", "sand-wedge", "putter", "neel", "jon", "max"]
+    @example_clubs = ["driver", "5-iron", "sand-wedge", "putter", "8-iron"]
   end
 
-  def swing(club_opt="")
-    # @club = club
+  def swing(swing)
+    @club = club
     puts "Swing #{@club}"
   end
 
-  def chip(club_opt="")
-    # @club = club
+  def chip(chip)
+    @club = club
     puts "Chips with #{@club}"
   end
 
   def putt
     puts "Lines up putt"
-  end
-  
-  def randomize_club(example_clubs)
-    50.times do |new_club|
-    @random_club = @example_clubs.shuffle.first
-    return @random_club
-    end
-  end
-  
+  end 
 end
 
+  # def randomize_club(example_clubs)
+  #   50.times do |new_club|
+  #   @random_club = @example_clubs.shuffle.first
+  #   return @random_club
+  #   end
+  # end
 
-
-random_clubs_array = []
+# random_clubs_array = []
 
 
 
@@ -82,15 +79,45 @@ golf.randomize_club(@example_clubs)
 golf.swing("7 iron") 
 golf.chip("Sand wedge")
 golf.putt
-golf.swing("6 iron")
-golf.chip("Pitching wedge")
-golf.putt
 
-golf.randomize_club(@example_clubs)
-random_clubs_array << @random_club
+# golf.randomize_club(@example_clubs)
+# random_clubs_array << @random_club
 
-p random_clubs_array
+# p random_clubs_array
 
 
-golf.each do |new_club|
-  golf.randomize_club(example_clubs)  
+# golf.each do |new_club|
+#   golf.randomize_club(example_clubs)  
+
+
+#Hockey release 2
+  class Hockey
+    def initialize(dangle, shot)
+      puts "Initializing hockey instance..."
+      @player = "Bobby Orr"
+      @dangle = dangle
+      @shot = shot
+    end
+    
+    def dangle(deke)
+      puts "#{@player} pulls the #{@dangle} one the defenseman!"
+    end
+    
+    def shot(power)
+      puts "#{@player} fires a #{@shot} on goal!"
+    end
+  end
+
+puck = Hockey.new("toe drag", "slapshot")
+puck.dangle("toe drag") 
+puck.shot("slapshot")
+
+puck = []
+@shots = ["wristshot", "snapshot", "slapshot", "knucklepuck"]
+@dangles = ["Michigan", "toe-drag", "between-the-legs", "triple-deke"]
+
+@example_shots.length.times do |i|
+  puck << Hockey.new(@shots[i], @dangles[i])
+end
+
+
