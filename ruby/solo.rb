@@ -1,20 +1,18 @@
-#Design a class
-
 class Snowboarder
 
 	attr_reader :rider, :snow_conditions, :mountain
 	attr_accessor :rider, :mountain
 
-	def initialize(rider)
+	def initialize(rider, mountain, jump, trick)
 		@rider = rider
-		@mountain = "Park City, Utah"
-		@jump = "50 ft Kicker"
+		@mountain = mountain
+		@jump = jump
+		@trick = trick
 		@snow_conditions = "fluffy"
 	end
 
-	def nationality(nationality)
+	def mountain(mountain)
 		puts "Today is the Mountain Dew Classic at #{@mountain}"
-		puts "Well Jim, here we have competitor #{@rider} riding for team #{nationality}."
 	end
 
 	def launch(height)
@@ -23,79 +21,53 @@ class Snowboarder
 	end
 
 	def trick(trick)
-		puts "#{@rider} pulled a #{trick} off the #{@jump}!!!"
+		puts "#{@rider} pulled a #{@trick} off the #{@jump} jump!!!"
 	end
 end
 
+puts "Time to create a snowboard instance.  Type your favorite 'rider mountain jump trick'"
+	user_fav = gets.chomp
+	snow_array = user_fav.split
+	p snow_array
+	
+		snow = Snowboarder.new(snow_array[0], snow_array[1], snow_array[2],snow_array[3])
+		snow.mountain(snow_array[1])
+		snow.launch(snow_array[2])
+		snow.trick(snow_array[3])
+	
 
-#Progam with rider
-#For user information on the standings of the mountain dew classic.. Put riders in array rangin from first to last
-#or Use a random number generation of 1-10 to score the riders ----->>>> this one will work better
-#array will show rider name, nationality, best trick, and overall score.  Will be ranked by score.
-#use a setter method to change the name of the competitor to a nickname after the finish their run
+variable_input = false
+until variable_input
 
-
-
-snow = Snowboarder.new("Torstein Horgmo")
-snow.mountain = "Breckenridge"
-puts "The snow is #{snow.snow_conditions} here at #{snow.mountain}!!!"
-snow.nationality("Norway")
-snow.launch(20)
-snow.trick("Rodeo")
-snow.rider = "Horgmo"
-puts "And that was a sweet run from #{snow.rider}."
-
-snow = Snowboarder.new("Halldor Helgason")
-snow.nationality("Iceland")
-snow.launch(23)
-snow.trick("Triple Backflip")
-snow.rider = "Helgason"
-puts "What a insane run from #{snow.rider}!!!"
-
-
-#User Interface
-
-
-ex_riders = ["Torstein Horgmo", "Sean White", "Halldor Helgason", "Eiki Helgason", "Marc McMorris", "Travis Rice"]
-ex_trick = ["Triple Rodeo", "Double Backflip", "1080", "1260", "1440", "Switchbutter 540"] 
-ex_nationality = ["Norway", "USA", "Iceland", "Iceland", "Canada", "USA"]
-ex_mountain = ["Park City", "Jackson Hole", "Breckenridge", "Whistler", "Teluride", "Stowe"]
-
-puts "Below are the riders competition profiles as well as their final scores"
-
-rider_profile = {}
-(ex_riders.length).times { |i| rider_profile[i + 1] = [] }
-
-rider_profile.each_with_index do |(rider), i|
-  rider_profile[rider] = [ex_riders[i], ex_nationality[i], ex_trick[i], rand(70..100)]
+puts "Would you like to create an instance of the Snowboarder Class? If no type 'done'."
+	answer = gets.chomp
+	if answer == "yes"
+		puts "Give me your rider, mountain, jump, and trick choice"
+			choices = gets.chomp
+			snow_array = choices.split
+			p snow_array
+			
+		snow = Snowboarder.new(snow_array[0], snow_array[1], snow_array[2],snow_array[3])
+		snow.mountain(snow_array[1])
+		snow.launch(snow_array[2])
+		snow.trick(snow_array[3])
+			
+	elsif answer == "done"
+		puts "Here is your results"
+		varible_input = true
+		
+		#Have the Class placed here with array data
+		snow = Snowboarder.new(snow_array[0], snow_array[1], snow_array[2],snow_array[3])
+		snow.mountain(snow_array[1])
+		snow.launch(snow_array[2])
+		snow.trick(snow_array[3])
+	end
 end
-
-p rider_profile
-
-# puts "I there a particular rider you are interested in? Type his name below"
-# 	rider_name = gets.chomp
-
-#Snowboard competiton Simulator
-
-puts "Choose a rider from the list below"
-	p ex_riders
-	rider_choice = gets.chomp
-puts "Choose a mountain from the list"
-	p ex_mountain
-	mountain_choice = gets.chomp
-puts "Choose a trick from the list"
-	p ex_trick
-	trick_choice = gets.chomp
-
-
-#Choose a mountain
-#Choose a trick
+	
+	
 
 
 
 
-
-
-
-
+# #each position in the array has an assigned number.  use that to link the specific variables to the class
 
