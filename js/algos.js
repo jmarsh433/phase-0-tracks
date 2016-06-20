@@ -27,7 +27,7 @@
 var rand_array = ['happy', 'sad', 'California', 'Fender']
 
 rand_array.sort(function(a,b){
-	var firstItem = ""
+	var firstItem = "";
 	firstItem += b.length - a.length;
 	return firstItem[0];
 });
