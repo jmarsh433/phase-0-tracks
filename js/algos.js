@@ -44,3 +44,39 @@ keyValueMatch(o1, o2)
 keyValueMatch(o3, o4)
 keyValueMatch(o1, o3)
 
+// Release #2 - Generate Random Test Data
+
+// PSEUDOCODE
+
+// Records an integer for the number of values in an array
+// Want to loop through the function to create random strings of 1-10 letters the given integers number of times
+// create an empty array
+// Set conditions for word length between 1 and 10 characters
+// Generates random strings determined by the integer given in the argument
+// push these new random strings into empty array
+// Returns a random array of strings of the length of the integer given
+
+// for a random number
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
+function makeid()
+{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < getRandomInt(1, 9); i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+    
+}
+
+makeid()
+
+
+
+
+
