@@ -61,22 +61,22 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
-function makeid()
-{
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-    for( var i=0; i < getRandomInt(1, 9); i++ )
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-    return text;
-    
+for (i=0; i<=5; i++) {
+	
+	function makeid() {
+			var array = [];
+		    var text = "";
+		    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+		
+		    for( var i=0; i < getRandomInt(1, 11); i++ )
+		        text += possible.charAt(Math.floor(Math.random() * possible.length));
+		
+		    array.push(text);
+		    return array;
+		}
 }
 
 makeid()
-
-
 
 
 
