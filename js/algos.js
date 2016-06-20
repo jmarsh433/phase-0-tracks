@@ -24,11 +24,23 @@
 // 	return a.length - b.length;
 // });
 
+// var rand_array = ['happy', 'sad', 'California', 'Fender']
+
+// rand_array.sort(function(a,b){
+// 	var firstItem = "";
+// 	firstItem += b.length - a.length;
+// 	return firstItem[0];
+// });
+
+// for some reason this code does not return the first item of the new array.
+// I decided to call the item outside the function
+
 var rand_array = ['happy', 'sad', 'California', 'Fender']
 
 rand_array.sort(function(a,b){
-	var firstItem = "";
-	firstItem += b.length - a.length;
-	return firstItem[0];
+	return b.length - a.length;
 });
+
+console.log(rand_array[0])
+
 
