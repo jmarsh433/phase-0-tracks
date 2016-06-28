@@ -1,0 +1,48 @@
+sqlite> CREATE TABLE prisoners (
+   ...> id INTEGER PRIMARY KEY,
+   ...> name VARCHAR(255),
+   ...> crime VARCHAR(255),
+   ...> cell_id INT
+   ...> );
+
+sqlite> SELECT * FROM prisoners;
+sqlite> INSERT INTO prisoners (name, crime, cell_id) VALUES ("Big Joe", "Armed Robbery", 86);
+sqlite> INSERT INTO prisoners (name, crime, cell_id) VALUES ("Tate", "2nd Degree Murder", 220);
+sqlite> INSERT INTO prisoners (name, crime, cell_id) VALUES ("Tiny", "Loitering", 573);
+
+sqlite> CREATE TABLE cell_block (
+   ...> id INTEGER PRIMARY KEY,
+   ...> guard_on_duty VARCHAR(255),
+   ...> lockdown_hours INT,
+   ...> cell_id INT,
+   ...> FOREIGN KEY (cell_id) REFERENCES prisoners(id)
+   ...> );
+
+sqlite> INSERT INTO cell_block (guard_on_duty, lockdown_hours) VALUES ("Jose", 13);
+sqlite> INSERT INTO cell_block (guard_on_duty, lockdown_hours) VALUES ("Jarome", 22);
+sqlite> INSERT INTO cell_block (guard_on_duty, lockdown_hours) VALUES ("Ted", 18);
+
+sqlite> SELECT * FROM cell_block;
+1|Jose|13|
+2|Jarome|22|
+3|Ted|18|
+
+sqlite> UPDATE prisoners SET cell_id=001 WHERE crime="2nd Degree Murder";
+sqlite> SELECT * FROM prisoners;
+1|Big Joe|Armed Robbery|86
+2|Tate|2nd Degree Murder|1
+3|Tiny|Loitering|573
+
+sqlite> SELECT * FROM prisoners, cell_block WHERE prisoners.id = cell_block.id;
+1|Big Joe|Armed Robbery|86|1|Jose|13|
+2|Tate|2nd Degree Murder|1|2|Jarome|22|
+3|Tiny|Loitering|573|3|Ted|18|
+
+sqlite> SELECT prisoners.name, cell_block.guard_on_duty FROM prisoners JOIN cell_block ON prisoners.cell_id = cell_block.id;
+Tate|Jose
+
+sqlite> DELETE FROM prisoners WHERE name="Tiny";
+sqlite> SELECT * FROM prisoners;
+1|Big Joe|Armed Robbery|86
+2|Tate|2nd Degree Murder|1
+
