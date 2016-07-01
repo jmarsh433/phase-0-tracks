@@ -43,8 +43,8 @@ def inmate_num()
 end
 
 
-def lockdown()
-if inmate_crime == "First Degree Murder" || "Second Degree Murder" || "Manslaughter" || "Attempted Murder"
+#Inmate lockdown hours
+if inmate_crime == "First Degree Murder" || "Second Degree Murder" || "Manslaughter" || "Attempted Murder" || "Murder" || "Armed Robbery"
 	puts "24 hours"
 elsif inmate_crime == "Breaking and Entering"
 	puts "16 hours"
@@ -53,6 +53,7 @@ elsif inmate_crime == "Aggravated Assault"
 else
 	puts "10 hours"
 end
+
 
 
 
