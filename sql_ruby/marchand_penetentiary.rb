@@ -42,6 +42,10 @@ def inmate_num()
 	rand.to_s[2..9] 
 end
 
+#Inmate Cell Number
+def inmate_cell()
+	rand.to_s[]
+
 
 #Inmate lockdown hours
 if inmate_crime == "First Degree Murder" || "Second Degree Murder" || "Manslaughter" || "Attempted Murder" || "Murder" || "Armed Robbery"
@@ -53,6 +57,9 @@ elsif inmate_crime == "Aggravated Assault"
 else
 	puts "10 hours"
 end
+
+# 
+
 
 
 
